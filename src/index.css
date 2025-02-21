@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(176, 191, 208, 1);
-  position: relative; /* Добавляем для корректного позиционирования псевдоэлемента */
-  overflow: hidden; /* На случай, если фон будет выходить за границы */
+  position: relative; 
+  overflow: hidden; 
 }
 
 body::before {
