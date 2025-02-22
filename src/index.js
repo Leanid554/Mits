@@ -11,6 +11,7 @@ import SideBar from "./components/SideBar/SideBar";
 import ConfigurationPage from "./Pages/ConfigurationPage/ConfigurationPage";
 import "./index.css";
 import DevicesPage from "./Pages/DevicesPage/DevicesPage";
+import LeaderboardPage from "./Pages/LeaderboardPage/LeaderboardPage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/configuration" replace />} />
           <Route path="/configuration" element={<ConfigurationPage />} />
           <Route path="/devices" element={<DevicesPage />} />
+          <Route path="/leaderboard" element={<LeaderboardPage />} />
         </Routes>
       </div>
     </Router>

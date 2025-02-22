@@ -72,37 +72,36 @@ export default function ConfigurationPage() {
 
             {/* right panel*/}
             <div className="settings-card">
-              <h3>{language === "en" ? "Select display mode" : "Wybierz tryb wyświetlania"}</h3>
-              <p className="right-block-p">
-                {language === "en"
-                  ? "Changing the display theme allows you to adjust the app to lighting conditions and your preferences"
-                  : "Zmiana motywu pozwala dostosować aplikację do warunków oświetleniowych i twoich preferencji"}
-              </p>
+  <h3>{language === "en" ? "Select display mode" : "Wybierz tryb wyświetlania"}</h3>
+  <p className="right-block-p">
+    {language === "en"
+      ? "Changing the display theme allows you to adjust the app to lighting conditions and your preferences"
+      : "Zmiana motywu pozwala dostosować aplikację do warunków oświetleniowych i twoich preferencji"}
+  </p>
 
+        <div className="form-group toggle pt-19">
+          <label>{language === "en" ? "Dark Mode" : "Tryb ciemny"}</label>
+          <label className="switch">
+            <input type="checkbox" checked={!darkMode} onChange={() => setDarkMode(!darkMode)} />
+            <span className="slider round"></span>
+          </label>
+        </div>
+        <div className="form-group toggle">
+          <label>{language === "en" ? "Light Mode" : "Tryb jasny"}</label>
+          <label className="switch">
+            <input type="checkbox" checked={!lightMode} onChange={() => setLightMode(!lightMode)} />
+            <span className="slider round"></span>
+          </label>
+        </div>
+        <div className="form-group toggle">
+          <label>{language === "en" ? "Use OS settings" : "Użyj ustawień systemowych"}</label>
+          <label className="switch">
+            <input type="checkbox" checked={!useOsSettings} onChange={() => setUseOsSettings(!useOsSettings)} />
+            <span className="slider round"></span>
+          </label>
+        </div>
+      </div>
 
-              <div className="form-group toggle pt-19">
-                <label>Dark Mode</label>
-                <label className="switch">
-                  <input type="checkbox" checked={!darkMode} onChange={() => setDarkMode(!darkMode)} />
-                  <span className="slider round"></span>
-                </label>
-              </div>
-              <div className="form-group toggle">
-                <label>Light Mode</label>
-                <label className="switch">
-                  <input type="checkbox" checked={!lightMode} onChange={() => setLightMode(!lightMode)} />
-                  <span className="slider round"></span>
-                </label>
-              </div>
-              <div className="form-group toggle">
-                <label>Use OS settings</label>
-                <label className="switch">
-                  <input type="checkbox" checked={!useOsSettings} onChange={() => setUseOsSettings(!useOsSettings)} />
-                  <span className="slider round"></span>
-                </label>
-              </div>
-
-            </div>
           </>
         )}
 

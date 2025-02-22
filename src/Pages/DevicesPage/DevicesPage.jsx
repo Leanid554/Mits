@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/Navbar/Navbar";
 import Tabs from "../../components/Tab/Tab";
@@ -18,6 +18,17 @@ export default function DevicesPage() {
     navigate(`/${tab}`);
   };
 
+  // Update deviceName and rotation when the language changes
+  useEffect(() => {
+    if (language === "en") {
+      setDeviceName("KU Launch Pad Left");
+      setRotation("KU Launch Pad Left");
+    } else {
+      setDeviceName("KU Launch Pad Lewy");
+      setRotation("KU Launch Pad Lewy");
+    }
+  }, [language]); // Trigger when language changes
+
   return (
     <div className="">
       <NavBar title={language === "en" ? "Devices" : "Urządzenia"} setLanguage={setLanguage} />
@@ -35,8 +46,8 @@ export default function DevicesPage() {
           value={selectedDevice} 
           onChange={(e) => setSelectedDevice(e.target.value)}
         >
-          <option>07.00000001 - KU Launch Pad Left</option>
-          <option>07.00000002 - KU Launch Pad Right</option>
+          <option>{language === "en" ? "07.00000001 - KU Launch Pad Left" : "07.00000001 - Wyrzutnia KU w lewo"}</option>
+          <option>{language === "en" ? "07.00000002 - KU Launch Pad Right" : "07.00000002 - KU Launch Pad w prawo"}</option>
         </select>
 
         <div className="device-inputs">

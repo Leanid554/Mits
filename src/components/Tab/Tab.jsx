@@ -33,7 +33,7 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
       </div>
 
       <div className="buttons">
-        <button className="cancel" onClick={() => navigate(-1)}>
+        <button className="cancel" onClick={() => navigate("/configuration")}>
           {language === "en" ? "Cancel" : "Anuluj"}
         </button>
         <button className="save">

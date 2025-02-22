@@ -7,6 +7,23 @@ const NavBar = ({ title, setLanguage }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [selectedLang, setSelectedLang] = useState("en");
 
+  const translations = {
+    en: {
+      profile: "Profile",
+      settings: "Settings",
+      logout: "Logout",
+      english: "English",
+      polish: "Polski",
+    },
+    pl: {
+      profile: "Profil",
+      settings: "Ustawienia",
+      logout: "Wyloguj",
+      english: "Angielski",
+      polish: "Polski",
+    },
+  };
+
   const toggleDropdown = (dropdown) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
@@ -42,7 +59,7 @@ const NavBar = ({ title, setLanguage }) => {
                   alt="UK Flag" 
                   width="24" 
                   height="16"
-                /> English
+                /> {translations[selectedLang].english}
               </li>
               <li onClick={() => handleLanguageChange("pl")}>
                 <img 
@@ -50,7 +67,7 @@ const NavBar = ({ title, setLanguage }) => {
                   alt="Polish Flag" 
                   width="24" 
                   height="16"
-                /> Polski
+                /> {translations[selectedLang].polish}
               </li>
             </ul>
           )}
@@ -64,9 +81,9 @@ const NavBar = ({ title, setLanguage }) => {
           </div>
           {openDropdown === "user" && (
             <ul className="dropdown-menu-profile">
-              <li onClick={() => setOpenDropdown(null)}>Profile</li>
-              <li onClick={() => setOpenDropdown(null)}>Settings</li>
-              <li onClick={() => setOpenDropdown(null)}>Logout</li>
+              <li onClick={() => setOpenDropdown(null)}>{translations[selectedLang].profile}</li>
+              <li onClick={() => setOpenDropdown(null)}>{translations[selectedLang].settings}</li>
+              <li onClick={() => setOpenDropdown(null)}>{translations[selectedLang].logout}</li>
             </ul>
           )}
         </div>
