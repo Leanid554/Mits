@@ -12,13 +12,30 @@
     display: flex;
     position: relative;
     border-bottom: 2px solid $primary-color-general-grey; 
-    width: 23.5%;
+    width: 354px;
   }
   
   .tabs {
     display: flex;
     width: 50%;
   }
+  .tabs {
+    display: flex;
+    gap: 20px;
+
+    button {
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #555;
+
+        &.active {
+            color: $primary-color-dark-blue;
+            border-bottom: 2px solid $primary-color-dark-blue;
+        }
+    }
+}
   
   .tab-button {
     flex: 1;

@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import SideBar from "./components/SideBar/SideBar";
 import ConfigurationPage from "./Pages/ConfigurationPage/ConfigurationPage";
 import "./index.css";
+import DevicesPage from "./Pages/DevicesPage/DevicesPage";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/configuration" replace />} />
           <Route path="/configuration" element={<ConfigurationPage />} />
+          <Route path="/devices" element={<DevicesPage />} />
         </Routes>
       </div>
     </Router>

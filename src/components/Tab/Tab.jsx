@@ -1,12 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 import "./index.scss";
 
 export default function Tabs({ activeTab, setActiveTab, language }) {
+  const navigate = useNavigate(); 
+
   const tabs = [
-    { key: "customizations", en: "Customizations", pl: "Dostosowania" },
-    { key: "devices", en: "Devices", pl: "Urządzenia" },
-    { key: "tags", en: "Tags", pl: "Tagi" },
+    { key: "customizations", en: "Customizations", pl: "Dostosowania", path: "/" },
+    { key: "devices", en: "Devices", pl: "Urządzenia", path: "/devices" },
+    { key: "tags", en: "Tags", pl: "Tagi", path: "/" },
   ];
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab.key); 
+    navigate(tab.path); 
+  };
 
   return (
     <div className="tabs-container">
@@ -16,7 +24,7 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
             <button
               key={tab.key}
               className={`tab-button ${activeTab === tab.key ? "active" : ""}`}
-              onClick={() => setActiveTab(tab.key)}
+              onClick={() => handleTabClick(tab)}
             >
               {language === "en" ? tab.en : tab.pl}
             </button>
@@ -25,8 +33,12 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
       </div>
 
       <div className="buttons">
-        <button className="cancel">{language === "en" ? "Cancel" : "Anuluj"}</button>
-        <button className="save">{language === "en" ? "Save" : "Zapisz"}</button>
+        <button className="cancel" onClick={() => navigate(-1)}>
+          {language === "en" ? "Cancel" : "Anuluj"}
+        </button>
+        <button className="save">
+          {language === "en" ? "Save" : "Zapisz"}
+        </button>
       </div>
     </div>
   );

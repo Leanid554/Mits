@@ -6,23 +6,7 @@
 }
 
 .configuration-page {
-    .tabs {
-        display: flex;
-        gap: 20px;
-
-        button {
-            background: none;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            color: #555;
-
-            &.active {
-                color: $primary-color-dark-blue;
-                border-bottom: 2px solid $primary-color-dark-blue;
-            }
-        }
-    }
+    
 
     .settings-container {
         display: flex;

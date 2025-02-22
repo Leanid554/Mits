@@ -26,6 +26,7 @@
   .dropdown {
     position: relative;
     cursor: pointer;
+    
 
     .dropdown-toggle {
       display: flex;
@@ -42,6 +43,8 @@
       padding: 10px 0;
       min-width: 120px;
       z-index: 100;
+      background: rgb(239, 246, 255);
+ 
 
       li {
         padding: 10px 15px;
@@ -55,9 +58,9 @@
     }
   }
 .dropdown-menu-profile{
-  
+  background: rgb(239, 246, 255);
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 0px;
     border-radius: 8px;
     list-style: none;

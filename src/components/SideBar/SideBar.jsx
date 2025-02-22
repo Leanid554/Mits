@@ -47,8 +47,8 @@ const Sidebar = () => {
 
         <div className="status-indicator"></div>
         <div
-          className={`icon-container ${activeItem === "settings" ? "active" : ""}`}
-          onClick={() => setActiveItem("settings")}
+          className={`icon-container ${activeItem === "settings1" ? "active" : ""}`}
+          onClick={() => setActiveItem("settings1")}
         >
           <img src={Settings} alt="settings" className="icon" />
         </div>
