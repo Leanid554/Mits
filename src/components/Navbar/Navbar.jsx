@@ -24,13 +24,34 @@ const NavBar = ({ title, setLanguage }) => {
       <div className="navbar-actions">
         <div className="dropdown">
           <div className="dropdown-toggle" onClick={() => toggleDropdown("language")}>
-            <span role="img" aria-label="flag">{selectedLang === "en" ? "🇬🇧" : "🇵🇱"}</span>
+            <img 
+              src={selectedLang === "en" 
+                ? "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1ec-1f1e7.svg" 
+                : "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f5-1f1f1.svg"} 
+              alt="flag" 
+              width="24" 
+              height="16"
+            />
             <img src={arrow} alt="arrow" className={`dropdown-icon ${openDropdown === "language" ? "rotate" : ""}`} />
           </div>
           {openDropdown === "language" && (
             <ul className="dropdown-menu">
-              <li onClick={() => handleLanguageChange("en")}>🇬🇧 English</li>
-              <li onClick={() => handleLanguageChange("pl")}>🇵🇱 Polski</li>
+              <li onClick={() => handleLanguageChange("en")}>
+                <img 
+                  src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1ec-1f1e7.svg" 
+                  alt="UK Flag" 
+                  width="24" 
+                  height="16"
+                /> English
+              </li>
+              <li onClick={() => handleLanguageChange("pl")}>
+                <img 
+                  src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f5-1f1f1.svg" 
+                  alt="Polish Flag" 
+                  width="24" 
+                  height="16"
+                /> Polski
+              </li>
             </ul>
           )}
         </div>
