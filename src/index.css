@@ -5,7 +5,13 @@ body {
   font-family: 'Inter';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(176, 191, 208, 1);
+  background: linear-gradient(120deg,  
+  rgba( 225, 235, 245, 0.9) 5%,   
+  rgba(176, 191, 208, 1) 40%,  
+  rgba(225, 235, 245, 0.9) 60%,  
+  rgba(225, 235, 245, 0.9) 95%   
+);
+
   position: relative; 
   overflow: hidden; 
 }
@@ -21,7 +27,7 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.6; 
+  opacity: 0.9; 
   z-index: -1;
 }
 

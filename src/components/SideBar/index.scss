@@ -1,6 +1,6 @@
 .sidebar {
   margin: 12px 24px 16px 14px;
-  width: 64px;
+  width: 100px;
   height: 93vh;
   border-radius: 16px;
   background-color: white;
@@ -42,7 +42,7 @@
   }
 
   .icon-container {
-    width: 48px;
+    width: 68px;
     height: 46px;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
     &::before {
       content: "";
       position: absolute;
-      left: -16%;
+      left: -25%;
       top: 50%;
       transform: translateY(-50%);
       height: 100%;

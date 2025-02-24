@@ -1,12 +1,12 @@
 @import '../../assets/styles/_variables.scss';
  .device-settings-card {
-    background: white;
+  background: rgba(255, 255, 255, 0.9); 
+
     border-radius: 8px;
     padding-left: 20px;
     padding-top: 8px;
     
     margin: 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-left: 150px;
     margin-right: 214px;
     margin-top: 20px;
@@ -38,7 +38,7 @@
       width: 35%;
       padding: 10px;
       border-radius: 8px;
-      border: 1px solid #d1d5db;
+      border: 1px solid $primary-color-medium-grey;
       font-family: Inter;
       font-weight: 400;
       font-size: 14px;
@@ -78,7 +78,7 @@
         input {
           padding: 10px;
           border-radius: 8px;
-          border: 1px solid #d1d5db;
+          border: 1px solid $primary-color-medium-grey;
           color: $primary-color-general-grey;
           font-family: Inter;
           font-weight: 400;
