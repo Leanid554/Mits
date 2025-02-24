@@ -56,8 +56,8 @@ const Sidebar = () => {
         </div>
 
         <div
-          className={`icon-container ${location.pathname === "/configuration" || location.pathname === "/devices" ? "active" : ""}`}
-          onClick={() => navigate("/configuration")}
+          className={`icon-container ${location.pathname === "/configuration/customization" || location.pathname === "/configuration/devices" ? "active" : ""}`}
+          onClick={() => navigate("/")}
         >
 
           <img src={Conf} alt="config" className="icon-conf" />

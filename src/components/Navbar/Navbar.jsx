@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import arrow from "./../../assets/icons/arrow.svg";
 import user from "./../../assets/img/user.png";
 import "./index.scss";
@@ -24,6 +24,14 @@ const NavBar = ({ title, setLanguage }) => {
     },
   };
 
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language");
+    if (savedLang) {
+      setSelectedLang(savedLang);
+      setLanguage(savedLang);
+    }
+  }, [setLanguage]);
+
   const toggleDropdown = (dropdown) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
@@ -31,6 +39,7 @@ const NavBar = ({ title, setLanguage }) => {
   const handleLanguageChange = (lang) => {
     setSelectedLang(lang);
     setLanguage(lang);
+    localStorage.setItem("language", lang); 
     setOpenDropdown(null);
   };
 

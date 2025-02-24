@@ -19,9 +19,15 @@ const App = () => {
       <div id="app-container">
         <SideBar />
         <Routes>
-          <Route path="/" element={<Navigate to="/configuration" replace />} />
-          <Route path="/configuration" element={<ConfigurationPage />} />
-          <Route path="/devices" element={<DevicesPage />} />
+          <Route
+            path="/"
+            element={<Navigate to="/configuration/customization" replace />}
+          />
+          <Route
+            path="/configuration/customization"
+            element={<ConfigurationPage />}
+          />
+          <Route path="/configuration/devices" element={<DevicesPage />} />
           <Route path="/leaderboard" element={<LeaderboardPage />} />
         </Routes>
       </div>

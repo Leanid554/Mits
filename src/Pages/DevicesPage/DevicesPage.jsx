@@ -18,7 +18,6 @@ export default function DevicesPage() {
     navigate(`/${tab}`);
   };
 
-  // Update deviceName and rotation when the language changes
   useEffect(() => {
     if (language === "en") {
       setDeviceName("KU Launch Pad Left");
@@ -27,11 +26,11 @@ export default function DevicesPage() {
       setDeviceName("KU Launch Pad Lewy");
       setRotation("KU Launch Pad Lewy");
     }
-  }, [language]); // Trigger when language changes
+  }, [language]); 
 
   return (
     <div className="">
-      <NavBar title={language === "en" ? "Devices" : "Urządzenia"} setLanguage={setLanguage} />
+      <NavBar title={language === "en" ? "Configuration" : "Konfiguracja"} setLanguage={setLanguage} />
 
       <div className="container">
         <Tabs activeTab={activeTab} setActiveTab={handleTabChange} language={language} />

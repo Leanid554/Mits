@@ -7,7 +7,7 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
 
   const tabs = [
     { key: "customizations", en: "Customizations", pl: "Dostosowania", path: "/" },
-    { key: "devices", en: "Devices", pl: "Urządzenia", path: "/devices" },
+    { key: "devices", en: "Devices", pl: "Urządzenia", path: "/configuration/devices" },
     { key: "tags", en: "Tags", pl: "Tagi", path: "/" },
   ];
 
@@ -33,7 +33,7 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
       </div>
 
       <div className="buttons">
-        <button className="cancel" onClick={() => navigate("/configuration")}>
+        <button className="cancel" onClick={() => navigate("/")}>
           {language === "en" ? "Cancel" : "Anuluj"}
         </button>
         <button className="save">
