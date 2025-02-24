@@ -18,6 +18,9 @@ const App = () => {
     <Router>
       <div id="app-container">
         <SideBar />
+        <div className="circle circle1"></div>
+        <div className="circle circle2"></div>
+        <div className="circle circle3"></div>
         <Routes>
           <Route
             path="/"

@@ -36,9 +36,11 @@
   
     .device-dropdown {
       width: 35%;
-      padding: 10px;
+      padding-left: 8px;
+      padding-top: 12px;
+      padding-bottom: 13px;
       border-radius: 8px;
-      border: 1px solid $primary-color-medium-grey;
+      border: 1px solid $primary-color-medium-grey-navbar;
       font-family: Inter;
       font-weight: 400;
       font-size: 14px;
@@ -76,9 +78,11 @@
         }
   
         input {
-          padding: 10px;
+          padding-left: 13px;
+          padding-top: 12px;
+          padding-bottom: 12px;
           border-radius: 8px;
-          border: 1px solid $primary-color-medium-grey;
+          border: 1px solid $primary-color-medium-grey-navbar;
           color: $primary-color-general-grey;
           font-family: Inter;
           font-weight: 400;

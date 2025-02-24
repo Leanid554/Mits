@@ -11,8 +11,9 @@
    
     display: flex;
     position: relative;
-    border-bottom: 2px solid $primary-color-general-grey; 
+    border-bottom: 1px solid $primary-color-medium-grey-navbar; 
     width: 354px;
+    
   }
   
   .tabs {
@@ -31,8 +32,10 @@
         color: $primary-color-general-grey;
 
         &.active {
+            
             color: $primary-color-dark-blue;
             border-bottom: 2px solid $primary-color-dark-blue;
+         
         }
     }
 }
@@ -40,8 +43,8 @@
   .tab-button {
     flex: 1;
     text-align: center;
-    padding: 12px 15px;
-    font-family: Inter;
+    padding: 12px 15px 12px 12px;
+    font-family: 'Geist';
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
@@ -90,7 +93,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-
+    color: $primary-color-general-grey;;
 
 
   }

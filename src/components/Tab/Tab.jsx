@@ -8,10 +8,11 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
   const tabs = [
     { key: "customizations", en: "Customizations", pl: "Dostosowania", path: "/" },
     { key: "devices", en: "Devices", pl: "Urządzenia", path: "/configuration/devices" },
-    { key: "tags", en: "Tags", pl: "Tagi", path: "/" },
+    { key: "tags", en: "Tags", pl: "Tagi", path: null }, 
   ];
 
   const handleTabClick = (tab) => {
+    if (!tab.path) return; 
     setActiveTab(tab.key); 
     navigate(tab.path); 
   };
@@ -25,6 +26,7 @@ export default function Tabs({ activeTab, setActiveTab, language }) {
               key={tab.key}
               className={`tab-button ${activeTab === tab.key ? "active" : ""}`}
               onClick={() => handleTabClick(tab)}
+              disabled={!tab.path} 
             >
               {language === "en" ? tab.en : tab.pl}
             </button>

@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
   margin: 0;
   font-family: 'Inter';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(120deg,  
-  rgba( 225, 235, 245, 0.9) 5%,   
-  rgba(176, 191, 208, 1) 40%,  
-  rgba(225, 235, 245, 0.9) 60%,  
-  rgba(225, 235, 245, 0.9) 95%   
-);
+  background: rgba(229, 235, 242, 1);
 
   position: relative; 
   overflow: hidden; 
@@ -32,8 +28,29 @@ body::before {
 }
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+.circle {
+  position: absolute;
+  background: rgba(217, 228, 255, 1);
+  width: 596px;  
+  height:596px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.circle1 {
+  top: -400px;
+  left: 344px;
+}
+
+.circle2 {
+  bottom: -300px;
+  left: -200px;
+}
+
+.circle3 {
+  top: -250px;
+  right: -200px;
 }
 
 #app-container {

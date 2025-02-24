@@ -7,9 +7,9 @@ export default function ConfigurationPage() {
   const [language, setLanguage] = useState("en");
   const [activeTab, setActiveTab] = useState("customizations");
   const [date, setDate] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
-  const [lightMode, setLightMode] = useState(true);
-  const [useOsSettings, setUseOsSettings] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  const [lightMode, setLightMode] = useState(false);
+  const [useOsSettings, setUseOsSettings] = useState(true);
 
   const handleDateChange = (event) => {
     setDate(event.target.value);
@@ -58,11 +58,11 @@ export default function ConfigurationPage() {
                   <label className="text-units pt-19">{language === "en" ? "Measurement Units" : "Jednostki miary"}</label>
                   <div className="radio-group">
                     <label >
-                      <input type="radio" name="units" defaultChecked />
+                      <input type="radio" name="units"  />
                       Metric
                     </label>
                     <label>
-                      <input type="radio" name="units" />
+                      <input type="radio" name="units"defaultChecked />
                       Imperial
                     </label>
                   </div>
@@ -72,29 +72,29 @@ export default function ConfigurationPage() {
 
             {/* right panel*/}
             <div className="settings-card">
-  <h3>{language === "en" ? "Select display mode" : "Wybierz tryb wyświetlania"}</h3>
-  <p className="right-block-p">
-    {language === "en"
-      ? "Changing the display theme allows you to adjust the app to lighting conditions and your preferences"
-      : "Zmiana motywu pozwala dostosować aplikację do warunków oświetleniowych i twoich preferencji"}
-  </p>
+            <h3>{language === "en" ? "Select display mode" : "Wybierz tryb wyświetlania"}</h3>
+            <p className="right-block-p">
+              {language === "en"
+                ? "Changing the display theme allows you to adjust the app to lighting conditions and your preferences"
+                : "Zmiana motywu pozwala dostosować aplikację do warunków oświetleniowych i twoich preferencji"}
+            </p>
 
         <div className="form-group toggle pt-19">
-          <label>{language === "en" ? "Dark Mode" : "Tryb ciemny"}</label>
+          <label className="right-block-label" >{language === "en" ? "Dark Mode" : "Tryb ciemny"}</label>
           <label className="switch">
             <input type="checkbox" checked={!darkMode} onChange={() => setDarkMode(!darkMode)} />
             <span className="slider round"></span>
           </label>
         </div>
         <div className="form-group toggle">
-          <label>{language === "en" ? "Light Mode" : "Tryb jasny"}</label>
+          <label className="right-block-label">{language === "en" ? "Light Mode" : "Tryb jasny"}</label>
           <label className="switch">
             <input type="checkbox" checked={!lightMode} onChange={() => setLightMode(!lightMode)} />
             <span className="slider round"></span>
           </label>
         </div>
         <div className="form-group toggle">
-          <label>{language === "en" ? "Use OS settings" : "Użyj ustawień systemowych"}</label>
+          <label className="right-block-label">{language === "en" ? "Use OS settings" : "Użyj ustawień systemowych"}</label>
           <label className="switch">
             <input type="checkbox" checked={!useOsSettings} onChange={() => setUseOsSettings(!useOsSettings)} />
             <span className="slider round"></span>
