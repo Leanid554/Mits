@@ -36,9 +36,9 @@
   
     .device-dropdown {
       width: 35%;
-      padding-left: 8px;
-      padding-top: 12px;
-      padding-bottom: 13px;
+      height: 46px;
+      padding: 13px 18px;
+      box-sizing: border-box;
       border-radius: 8px;
       border: 1px solid $primary-color-medium-grey-navbar;
       font-family: Inter;
@@ -47,12 +47,21 @@
       line-height: 20px;
       letter-spacing: 0px;
       color: $primary-color-general-grey;
-
+      appearance: none; 
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url("./../../assets/icons/arrow.svg") no-repeat right 20px center;
       background-color: transparent;
       outline: none;
       cursor: pointer;
     
     }
+
+    
+
+
+
+
     .unput-name-device{
         width: 35%;
     }
@@ -78,9 +87,9 @@
         }
   
         input {
-          padding-left: 13px;
-          padding-top: 12px;
-          padding-bottom: 12px;
+          height: 46px;
+          padding: 13px 18px;
+          box-sizing: border-box;
           border-radius: 8px;
           border: 1px solid $primary-color-medium-grey-navbar;
           color: $primary-color-general-grey;

@@ -71,21 +71,24 @@ export default function ConfigurationPage() {
             </div>
 
             {/* right panel*/}
-            <div className="settings-card">
-            <h3>{language === "en" ? "Select display mode" : "Wybierz tryb wyświetlania"}</h3>
-            <p className="right-block-p">
+        <div className="settings-card">
+          <h3>{language === "en" ? "Select display mode" : "Wybierz tryb wyświetlania"}</h3>
+          <p className="right-block-p">
               {language === "en"
-                ? "Changing the display theme allows you to adjust the app to lighting conditions and your preferences"
-                : "Zmiana motywu pozwala dostosować aplikację do warunków oświetleniowych i twoich preferencji"}
-            </p>
+                  ? "Changing the display theme allows you to adjust the app to lighting conditions and your preferences"
+                  : "Zmiana motywu pozwala dostosować aplikację do warunków oświetleniowych i twoich preferencji"}
+          </p>
+          <div className="divider"></div> 
 
-        <div className="form-group toggle pt-19">
-          <label className="right-block-label" >{language === "en" ? "Dark Mode" : "Tryb ciemny"}</label>
-          <label className="switch">
+    <div className="form-group toggle pt-19">
+        <label className="right-block-label">{language === "en" ? "Dark Mode" : "Tryb ciemny"}</label>
+        <label className="switch">
             <input type="checkbox" checked={!darkMode} onChange={() => setDarkMode(!darkMode)} />
             <span className="slider round"></span>
-          </label>
-        </div>
+        </label>
+    </div>
+
+
         <div className="form-group toggle">
           <label className="right-block-label">{language === "en" ? "Light Mode" : "Tryb jasny"}</label>
           <label className="switch">

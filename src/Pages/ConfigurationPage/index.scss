@@ -43,13 +43,23 @@
            
         }
     }
-    .right-block-p{
-        padding-bottom: 15px;
-        padding-top: 4px;
-        border-bottom: 1px solid $primary-color-general-grey-opacity;
-        color: $primary-color-dark-grey !important;
+    // .right-block-p{
+        
+    //     width: 100%;
+    //     padding-bottom: 15px;
+    //     padding-top: 4px;
+    //     border-bottom: 1px solid $primary-color-general-grey-opacity;
+    //     color: $primary-color-dark-grey !important;
+    // }
+    .divider {
+        height: 1px;
+        background: $primary-color-general-grey-opacity;
+        width: calc(100% + 40px); 
+        margin: 10px -20px; 
+        margin-top: 15px;
     }
-
+    
+    
     .flex-labels {
         display: flex;
         gap: 20px;
@@ -59,16 +69,22 @@
             flex: 1; 
             display: flex;
             flex-direction: column;
+            
 
             label {
                 width: 100%;
+                
                 
             }
 
             select {
                 width: 100%;
                 height: 46px;
-                padding-left: 13px;
+                padding: 13px 18px 13px 18px;
+                appearance: none; 
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background: url("./../../assets/icons/arrow.svg") no-repeat right 20px center;
             }
         }
     }
@@ -82,10 +98,12 @@
             margin-bottom: 5px;
             color: $primary-color-general-grey;
         }
-        input{
-            height: 44px;
-            padding-left: 18px;
+        input {
+            height: 46px;
+            padding: 13px 18px;
+            box-sizing: border-box;
         }
+        
         select, input {
             // width: 100%; 
            
